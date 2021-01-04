@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        <label for="fuel">HP:</label>
+        <meter id="fuel"
+            min="0" max="100"
+            low="33" high="66" optimum="80"
+            value="100">
+         at 50/100
+        </meter>
+        <input type="button" value="Attack" id="button">
+        <h1 id = "HP">..</h1>
+        
+
+        <script>
+            document.getElementById("button").addEventListener("click",(e)=>{
+                let fuel = document.getElementById("fuel")
+                fuel.value -= 10; 
+                //Haal via het DOM de elementen binnen
+
+            });
+        </script>
+    </body>
+</html>
