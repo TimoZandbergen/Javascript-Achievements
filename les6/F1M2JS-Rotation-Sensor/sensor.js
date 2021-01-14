@@ -52,7 +52,7 @@ function activateVoice(alpha, beta, gamma){
 function showMyImage(alpha, beta, gamma){
     // image if X-axis > value
     if(beta > 40){
-        document.getElementById('myImage').src = "media-college-1.jpg"; // show image
+        document.getElementById('myImage').src = "home.jpg"; // show image
         }
         else {
             document.getElementById('myImage').src = ""; // no image
