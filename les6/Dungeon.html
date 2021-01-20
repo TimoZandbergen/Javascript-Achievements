@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DungeonMaster</title>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <button id="button" onClick="rollingForStats()">Click here!</button>
+        <p>Jouw getallen zijn:</p>
+        <p id="Number">-</p>
+        <p id="Number1">-</p>
+        <p id="Number2">-</p>
+        <p id="Number3">-</p>
+        <p>het laagste getal:</p>
+        <p id="laagstegetal">-</p>
+        <p>het hoogste getal:</p>
+        <p id="hoogstegetal">-</p>
+        
+        <script>
+            function rollingForStats(){
+    
+    var arr1 = Math.floor(Math.random() * 6) + 1;
+    var arr2 = Math.floor(Math.random() * 6) + 1;
+    var arr3 = Math.floor(Math.random() * 6) + 1;
+    var arr4 = Math.floor(Math.random() * 6) + 1;
+
+    console.log(arr1);
+    console.log(arr2);
+    console.log(arr3);
+    console.log(arr4);
+
+
+    var numbers = [arr1, arr2, arr3, arr4]
+    console.log(numbers);
+
+    var laagste = Math.min.apply(Math, numbers);
+    console.log("laagstegetal:", laagste);
+
+    var HoogsteGetallen = arr1 + arr2 + arr3 + arr4 - laagste;
+    console.log("hoogstegetal:", HoogsteGetallen)
+
+    document.getElementById("Number").innerHTML = arr1;
+    document.getElementById("Number1").innerHTML = arr2;
+    document.getElementById("Number2").innerHTML = arr3;
+    document.getElementById("Number3").innerHTML = arr4;
+    document.getElementById("laagstegetal").innerHTML = laagste;
+    document.getElementById("hoogstegetal").innerHTML = HoogsteGetallen;
+            }        
+    </script>
+        
+    </body>
+</html>
